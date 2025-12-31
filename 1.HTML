@@ -495,14 +495,14 @@
     <div class="slider" id="slider">
       <div class="slides" id="slides">
         <div class="slide">
-          <img src="https://picsum.photos/1200/520?seed=agri1" alt="Lush green crop field"/>
+          <img src="pesticides.jpg" alt="Lush green crop field"/>
           <div class="overlay">
             <h2>Quality Seeds for Higher Yield</h2>
             <p>Trusted varieties for paddy, cotton, and more.</p>
           </div>
         </div>
         <div class="slide">
-          <img src="https://picsum.photos/1200/520?seed=agri2" alt="Farmers holding seeds"/>
+          <img src="seeds.jpg" alt="Farmers holding seeds"/>
           <div class="overlay">
             <h2>Trusted Pesticides & Fertilizers</h2>
             <p>Safe products from reliable brands — advice available in store.</p>
@@ -708,4 +708,5 @@
     let startX=0; slider.addEventListener('touchstart',(e)=>{ startX=e.touches[0].clientX; clearInterval(autoTimer); }); slider.addEventListener('touchend',(e)=>{ const dx=(e.changedTouches[0].clientX-startX); if(dx>40) prev(); else if(dx<-40) next(); resetAuto(); }); goTo(0); startAuto(); })();
   </script>
 </body>
+
 </html>
