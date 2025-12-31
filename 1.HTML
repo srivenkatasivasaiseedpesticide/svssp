@@ -1,0 +1,711 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sri Venkata Siva Sai Seeds & Pesticides</title>
+  <meta name="description" content="Sri Venkata Siva Sai Seeds & Pesticides — Macherla, Guntur" />
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+    :root {
+      --green: #147B34; /* Deeper, richer green */
+      --light-green: #E6F3E9; /* Softer light green */
+      --muted: #5A5A5A;
+      --dark: #1A1A1A;
+      --deep-green: #1B5E20; /* Darker green from your image for the new footer background */
+      --card-shadow: 0 10px 30px rgba(20, 123, 52, 0.1); 
+      --hover-shadow: 0 16px 40px rgba(20, 123, 52, 0.25);
+      --radius: 16px; 
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+      color: var(--dark);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #f9fffb; line-height: 1.6; }
+
+    /* Utility Classes */
+    .fade-in { animation: fadeIn 0.8s ease-out forwards; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* Top header */
+    .topbar { 
+      background: linear-gradient(135deg, var(--green) 0%, #2CB057 100%); 
+      color: white; 
+      padding: 24px 30px; 
+      display: flex; 
+      gap: 20px; 
+      align-items: center; 
+      justify-content: space-between; 
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    .brand { display: flex; gap: 16px; align-items: center; }
+    .logo { 
+      width: 65px; 
+      height: 65px; 
+      border-radius: 50%; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      font-weight: 700; 
+      font-size: 22px; 
+      background-color: rgba(255, 255, 255, 0.15); 
+      border: 3px solid rgba(255, 255, 255, 0.4); 
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+      letter-spacing: 0.5px;
+    }
+    .brand h1 { margin: 0; font-size: 24px; font-weight: 700; line-height: 1.1; }
+    .brand p { margin: 0; font-size: 13px; opacity: 0.9; font-weight: 300; }
+    .top-info { text-align: right; font-size: 15px; font-weight: 500; }
+    .top-info br { display: none; } 
+    .top-info > span { display: block; }
+    .top-info span:first-child { display: block; margin-bottom: 4px; }
+
+    /* Navigation */
+    nav { 
+      background: white; 
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); 
+      position: sticky; 
+      top: 0; 
+      z-index: 999; 
+      border-radius: 0 0 var(--radius) var(--radius); 
+    }
+    nav ul { 
+      display: flex; 
+      list-style: none; 
+      padding: 10px 20px; 
+      gap: 12px; 
+      overflow-x: auto; 
+      white-space: nowrap; 
+      scroll-behavior: smooth; 
+      -webkit-overflow-scrolling: touch; 
+    }
+    nav ul li a { 
+      text-decoration: none; 
+      color: var(--dark); 
+      font-weight: 500; 
+      font-size: 15px; 
+      display: flex; 
+      align-items: center; 
+      gap: 6px; 
+      padding: 10px 18px; 
+      border-radius: 10px; 
+      transition: all 0.3s ease; 
+      border: 1px solid transparent;
+    }
+    nav ul li a:hover { 
+      background: var(--light-green); 
+      color: var(--green);
+      border: 1px solid var(--green);
+      transform: translateY(-2px); 
+      box-shadow: 0 5px 15px rgba(20, 123, 52, 0.1); 
+    }
+    nav ul::-webkit-scrollbar { display: none; }
+
+    /* Hero Slider */
+    .hero { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
+    .slider { position: relative; overflow: hidden; border-radius: 20px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); background: var(--light-green); height: 500px; }
+    .slide { min-width: 100%; display: flex; align-items: center; justify-content: center; position: relative; height: 500px; }
+    .slide img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 20px; filter: brightness(0.9); }
+    .slider .overlay { position: absolute; left: 40px; bottom: 40px; background: rgba(0, 0, 0, 0.6); color: white; padding: 25px 30px; border-radius: 18px; backdrop-filter: blur(8px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); animation: fadeInUp 1s ease forwards; max-width: 80%; }
+    .slider .overlay h2 { margin: 0; font-size: 30px; letter-spacing: 0.5px; font-weight: 700; }
+    .slider .overlay p { margin: 10px 0 0; font-size: 18px; opacity: 0.9; font-weight: 400; }
+    @keyframes fadeInUp { 0% { opacity: 0; transform: translateY(30px); } 100% { opacity: 1; transform: translateY(0); } }
+
+    .arrow { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255, 255, 255, 0.98); border-radius: 50%; padding: 0; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); cursor: pointer; border: 0; font-size: 26px; color: var(--green); transition: all 0.2s ease; }
+    .arrow.left { left: 20px; } 
+    .arrow.right { right: 20px; }
+    .arrow:hover { background: white; transform: translateY(-50%) scale(1.1); }
+    .arrow:active { transform: translateY(-50%) scale(.95); }
+    .dots { display: flex; gap: 10px; position: absolute; right: 30px; bottom: 30px; }
+    .dot { width: 14px; height: 14px; border-radius: 50%; background: rgba(255, 255, 255, 0.7); border: 2px solid rgba(255, 255, 255, 0.2); cursor: pointer; transition: all 0.3s; }
+    .dot.active { background: var(--green); transform: scale(1.2); box-shadow: 0 2px 8px rgba(31, 138, 61, 0.4); }
+
+    /* Sections */
+    section { max-width: 1200px; margin: 60px auto; padding: 0 20px; }
+    h2.section-title { 
+      color: var(--green); 
+      margin-bottom: 30px; 
+      font-size: 28px; 
+      font-weight: 700;
+      border-left: 5px solid var(--green); 
+      padding-left: 15px; 
+      letter-spacing: 0.5px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+    }
+    .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+    .prod { 
+      display: flex; 
+      gap: 20px; 
+      align-items: center; 
+      padding: 20px; 
+      border-radius: var(--radius); 
+      background: #ffffff; 
+      border: 1px solid rgba(31, 138, 61, 0.15); 
+      transition: all 0.4s ease; 
+      box-shadow: var(--card-shadow); 
+    }
+    .prod:hover { transform: translateY(-6px); box-shadow: var(--hover-shadow); border-color: var(--green); }
+    .prod img { width: 100px; height: 100px; object-fit: cover; border-radius: 14px; transition: transform 0.4s; border: 3px solid var(--light-green); }
+    .prod:hover img { transform: scale(1.05); border-color: var(--green); }
+    .prod h4 { font-size: 18px; font-weight: 600; color: var(--dark); }
+    .prod p { margin-top: 4px; }
+
+    .card { background: white; border-radius: var(--radius); padding: 30px; box-shadow: var(--card-shadow); margin-bottom: 24px; border: 1px solid #eee; }
+    .card p { font-size: 16px; color: var(--muted); }
+    .muted { color: var(--muted); font-size: 15px; }
+    .btn { display: inline-block; background: var(--green); color: white; padding: 14px 24px; border-radius: 10px; text-decoration: none; font-weight: 600; box-shadow: 0 8px 25px rgba(20, 123, 52, 0.3); transition: all 0.3s ease; margin-top: 15px; letter-spacing: 0.5px; }
+    .btn:hover { background: #106a2e; transform: translateY(-3px) scale(1.01); box-shadow: 0 12px 30px rgba(20, 123, 52, 0.4); }
+
+    /* Commitment & Expertise */
+    .commitment, .expertise { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-bottom: 40px; }
+    .commitment .card, .expertise .card { background: var(--light-green); border-radius: var(--radius); padding: 30px; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); height: 100%; border: 1px solid rgba(20, 123, 52, 0.1); }
+    .commitment .card .card-image, 
+    .expertise .card .card-image { width: 100%; height: 200px; object-fit: cover; border-radius: 12px; margin-bottom: 20px; border: 4px solid white; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease; }
+    .commitment .card:hover .card-image, 
+    .expertise .card:hover .card-image { transform: scale(1.02); }
+
+    .commitment h3, .expertise h3 { color: var(--green); margin-bottom: 15px; font-size: 20px; font-weight: 700; border-bottom: 2px solid rgba(20, 123, 52, 0.2); padding-bottom: 10px; }
+    .card h3 { color: var(--green); margin-bottom: 15px; font-size: 22px; font-weight: 700; border-bottom: none; padding-bottom: 0; }
+    .commitment ul, .expertise ul { list-style: none; padding-left: 0; margin-top: 15px; }
+    .commitment ul li, .expertise ul li { padding: 8px 0; border-bottom: 1px dashed rgba(20, 123, 52, 0.15); }
+    .commitment ul li:last-child, .expertise ul li:last-child { border-bottom: none; }
+
+    /* ORIGINAL SIMPLE FOOTER */
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 25px 20px;
+      font-size: 14px;
+      margin-top: 50px;
+      line-height: 1.8;
+    }
+    footer a { color: #90ee90; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+    footer a:hover { color: var(--green); text-decoration: underline; }
+
+    /* DETAILED FOOTER STYLES (MATCHING THE IMAGE) */
+    .detailed-footer-wrapper {
+      background-color: var(--deep-green); /* Dark green background */
+      color: white;
+      padding: 40px 0 0;
+      position: relative;
+      overflow: hidden;
+      margin-top: 0; /* Keep it right after the simple footer */
+    }
+
+    /* Top 'grass' border */
+    .detailed-footer-wrapper::before {
+      content: '';
+      position: absolute;
+      top: -15px; /* Adjust to show the grass blades outside the footer */
+      left: 0;
+      right: 0;
+      height: 40px;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20" preserveAspectRatio="none"><path fill="%23f9fffb" d="M0 20 L0 5 C5 15, 10 0, 15 10, 20 5, 25 15, 30 0, 35 10, 40 5, 45 15, 50 0, 55 10, 60 5, 65 15, 70 0, 75 10, 80 5, 85 15, 90 0, 95 10, 100 5 L100 20 Z"/></svg>') repeat-x;
+      background-size: 100px 20px;
+      z-index: 2;
+      filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1));
+    }
+    
+    .footer-main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px 40px;
+      display: grid;
+      grid-template-columns: 2.5fr 1.5fr 1fr 2fr; 
+      gap: 40px;
+      position: relative;
+      z-index: 1; /* Above the grass border */
+    }
+
+    .footer-col h4, .footer-col h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 25px;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .footer-col h4:first-child { 
+        margin-top: 0; 
+        font-size: 26px; 
+        font-weight: 700; 
+        text-transform: none; 
+        letter-spacing: normal; 
+    }
+
+    /* Column 1: About */
+    .footer-about {
+        padding-right: 20px; /* Space from the next column */
+    }
+    .footer-about .logo-footer-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    .footer-about .logo-footer-text {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.1;
+    }
+    .footer-about .logo-footer-icon {
+        width: 40px;
+        height: 40px;
+        background: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        color: var(--green);
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    .footer-about p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #D4D4D4; 
+      margin-bottom: 20px;
+    }
+    
+    /* Contact Info */
+    .contact-list {
+      list-style: none;
+      padding: 0;
+    }
+    .contact-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 15px;
+      font-size: 14px;
+      line-height: 1.4;
+      color: #D4D4D4;
+    }
+    .contact-list li a {
+      color: #D4D4D4;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .contact-list li a:hover {
+      color: #A5D6A7; /* Lighter green on hover */
+    }
+    .contact-list .icon {
+      color: #A5D6A7; /* Light green for icons */
+      font-size: 16px;
+      margin-top: 2px;
+    }
+
+    /* Quick Links */
+    .quick-links {
+      list-style: none;
+      padding: 0;
+    }
+    .quick-links li {
+      margin-bottom: 10px;
+    }
+    .quick-links a {
+      color: #D4D4D4;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.3s, padding-left 0.3s;
+      display: block;
+      padding-left: 0;
+    }
+    .quick-links a:before {
+      content: '»';
+      color: #A5D6A7;
+      margin-right: 5px;
+      opacity: 0.7;
+      transition: margin 0.3s;
+    }
+    .quick-links a:hover {
+      color: #A5D6A7;
+      padding-left: 5px;
+    }
+
+    /* Newsletter/Social */
+    .subscribe-box-container {
+        margin-top: 15px;
+    }
+    .subscribe-box {
+      background: white;
+      border-radius: 6px;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    .subscribe-box span {
+      color: var(--dark);
+      font-weight: 500;
+      font-size: 14px;
+    }
+    .subscribe-box .sub-btn {
+      background: var(--green);
+      color: white;
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 18px;
+      transition: background 0.3s;
+      margin-left: 10px;
+    }
+    .subscribe-box .sub-btn:hover {
+      background: #0f5724;
+    }
+    
+    /* Floating Contact Buttons (Phone/WhatsApp) */
+    .floating-contact {
+        position: fixed;
+        right: 20px;
+        z-index: 1000;
+    }
+    .floating-contact a {
+        display: block;
+        margin-bottom: 15px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: white;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s;
+    }
+    .floating-contact a:hover {
+        transform: scale(1.1);
+    }
+    .floating-contact .phone {
+        top: 250px; /* Adjusted position */
+        background-color: var(--dark);
+    }
+    .floating-contact .whatsapp {
+        top: 315px; /* Adjusted position */
+        background-color: #25D366;
+    }
+
+    /* Social Icons in Footer */
+    .footer-social-icons {
+      margin-top: 30px;
+      display: flex;
+      gap: 15px;
+    }
+    .footer-social-icons a {
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .footer-social-icons a:hover {
+      background: var(--green);
+      transform: translateY(-2px);
+    }
+
+    /* Copyright Bar */
+    .footer-bar {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 15px 20px;
+      text-align: center;
+      font-size: 13px;
+      color: #B0B0B0;
+    }
+    .footer-bar a {
+      color: var(--green);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .footer-bar a:hover {
+      text-decoration: underline;
+    }
+
+
+    /* Media Queries for Responsiveness */
+    @media(max-width: 1000px) { 
+        .footer-main {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    @media(max-width: 800px) { 
+        .commitment, .expertise { grid-template-columns: 1fr; } 
+    }
+    @media(max-width: 650px) {
+        .footer-main {
+            grid-template-columns: 1fr;
+        }
+        .footer-about {
+            padding-right: 0;
+        }
+    }
+    @media(max-width: 500px) {
+        .floating-contact a {
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="brand">
+      <div class="logo">SVSSP</div>
+      <div>
+        <h1>Sri Venkata Siva Sai Seeds & Pesticides</h1>
+        <p style="font-size:12px;margin-top:4px">PROP : Kothapalli Venkata Reddy<BR>
+            Macherla, Guntur District — Andhra Pradesh</p>
+      </div>
+    </div>
+    
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="#home">🏠 Home</a></li>
+      <li><a href="#seeds">🧑‍🌾 Seeds</a></li>
+      <li><a href="#fertilizers">🌾 Fertilizers</a></li>
+      <li><a href="#pesticides">🪳 Pesticides</a></li>
+      <li><a href="#about">ℹ️ About Us</a></li>
+      <li><a href="#commitment">💚 Our Commitment</a></li>
+      <li><a href="#expertise">🌱 Our Expertise</a></li>
+      <li><a href="#contact">📞 Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="slider" id="slider">
+      <div class="slides" id="slides">
+        <div class="slide">
+          <img src="https://picsum.photos/1200/520?seed=agri1" alt="Lush green crop field"/>
+          <div class="overlay">
+            <h2>Quality Seeds for Higher Yield</h2>
+            <p>Trusted varieties for paddy, cotton, and more.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="https://picsum.photos/1200/520?seed=agri2" alt="Farmers holding seeds"/>
+          <div class="overlay">
+            <h2>Trusted Pesticides & Fertilizers</h2>
+            <p>Safe products from reliable brands — advice available in store.</p>
+          </div>
+        </div>
+      </div>
+      <button class="arrow left" id="prev">‹</button>
+      <button class="arrow right" id="next">›</button>
+      <div class="dots" id="dots">
+        <div class="dot active" data-index="0"></div>
+        <div class="dot" data-index="1"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="seeds">
+    <h2 class="section-title">Seeds</h2>
+    <div class="products-grid">
+      <div class="prod"><img src="https://picsum.photos/180/120?seed=seed1"><div><h4>Cotton Seeds</h4><p class="muted">High-yield varieties, certified.</p></div></div>
+      <div class="prod"><img src="https://picsum.photos/180/120?seed=seed2"><div><h4>Paddy Seeds</h4><p class="muted">Suitable for local soil & water conditions.</p></div></div>
+    </div>
+  </section>
+
+  <section id="fertilizers">
+    <h2 class="section-title">Fertilizers</h2>
+    <div class="products-grid">
+      <div class="prod"><img src="https://picsum.photos/180/120?seed=fert"><div><h4>NPK Fertilizers</h4><p class="muted">Balanced nutrients for crops.</p></div></div>
+      <div class="prod"><img src="https://picsum.photos/180/120?seed=orgfert"><div><h4>Organic Fertilizers</h4><p class="muted">Eco-friendly options available.</p></div></div>
+    </div>
+  </section>
+
+  <section id="pesticides">
+    <h2 class="section-title">Pesticides</h2>
+    <div class="products-grid">
+      <div class="prod"><img src="https://picsum.photos/180/120?seed=pest"><div><h4>Insect Control</h4><p class="muted">Safe brands for pest management.</p></div></div>
+      <div class="prod"><img src="https://picsum.photos/180/120?seed=fung"><div><h4>Fungicides</h4><p class="muted">Protect crops from fungal diseases.</p></div></div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">About Us</h2>
+    <div class="card">
+      <h3>A Legacy of Agricultural Support Since 2010 🌱</h3>
+      <p>
+        Sri Venkata Siva Sai Seeds & Pesticides has been a dedicated partner to the farming community in the **Guntur District, Andhra Pradesh**, since our establishment in **2010**. With over **13 years of specialized experience**, we have built a reputation for providing only certified, **high-quality seeds**, effective **pesticides**, and essential **fertilizers** to enhance crop yield and health.
+      </p>
+      <p style="margin-top: 15px;">
+        Our mission is to empower farmers by supplying reliable products and offering **expert technical advisory**. We leverage our extensive knowledge of local soil conditions and regional crops to provide tailored guidance, ensuring every farmer achieves a successful and profitable harvest.
+      </p>
+    </div>
+  </section>
+
+  <section id="commitment">
+    <h2 class="section-title">Our Commitment</h2>
+    <div class="commitment">
+      <div class="card">
+        <img src="http://googleusercontent.com/image_collection/image_retrieval/5332168773617524182" alt="Sustainable farming practices and green energy" class="card-image"/>
+        <h3>Sustainable & High-Quality Products</h3>
+        <p>We prioritize sustainability and environmental care in all our practices. By adhering to eco-friendly methods, we ensure the production of high-quality products while minimizing our ecological footprint.</p>
+        <ul class="muted">
+          <li>Eco-Friendly Practices</li>
+          <li>Waste Recycling</li>
+          <li>Organic Growth</li>
+          <li>Natural Energy Use</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Serving Our Local Farming Community</h3>
+        <p>Our commitment extends beyond products. We aim to be a reliable partner to local farmers, providing timely advice, fair pricing, and support for a prosperous agricultural community.</p>
+        <ul class="muted">
+          <li>Local Soil Analysis</li>
+          <li>Seasonal Crop Planning</li>
+          <li>Expert Pest Advice</li>
+          <li>Quick Farm Delivery</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="expertise">
+    <h2 class="section-title">Our Expertise</h2>
+    <div class="expertise">
+      <div class="card">
+        <img src="http://googleusercontent.com/image_collection/image_retrieval/10388420141504767577" alt="Farmer receiving technical support and solutions" class="card-image"/>
+        <h3>Providing Exceptional Agricultural Solutions</h3>
+        <ul class="muted">
+          <li>Tractor in a field: Organic Farming — Promoting eco-friendly farming practices with natural fertilizers and sustainable techniques.</li>
+          <li>Advanced Irrigation — Innovative irrigation systems designed for efficient water usage and maximum yield.</li>
+          <li>Modern Equipment — State-of-the-art machinery to enhance productivity and reduce manual labor.</li>
+          <li>Fertilizer Solutions — High-quality fertilizers for healthier crops and enhanced soil fertility.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Technical Support & Advisory</h3>
+        <p>Our staff is trained to provide technical support on product application, dosage, and best farming practices specific to the Guntur region's climate and soil.</p>
+        <ul class="muted">
+          <li>In-Store Product Demos</li>
+          <li>Certified Seed Guidance</li>
+          <li>Customized Fertilizer Blends</li>
+          <li>Disease Management Protocols</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">📞 Contact Us</h2>
+    <div class="card">
+      <p>Visit us in Macherla or give us a call to discuss your farming needs. We're here to help you achieve a better harvest!</p>
+      <p style="margin-top:10px; font-weight:600;">Proprietor: Kothapalli Venkata Reddy</p>
+      <p style="font-size:18px; color:var(--green);">Phone: <a href="tel:+919133019281" class="btn" style="padding: 6px 12px; margin-left: 10px; font-size:16px;">91330 19281</a></p>
+    </div>
+  </section>
+
+ 
+
+  <div class="detailed-footer-wrapper">
+    <div class="footer-main">
+
+      <div class="footer-col footer-about">
+        <div class="logo-footer-container">
+            <span class="logo-footer-icon"><i class="fa-solid fa-leaf"></i></span>
+            <div class="logo-footer-text">SRI VENKATA SIVA SAI Seeds & Pesticides</div>
+        </div>
+        <h4 style="font-size: 18px; margin-bottom: 30px;">Wholesale Distributor of All Kind of Seeds, Pesticide & Fertilizer</h4>
+        <p>
+          Sri Venkata Siva Sai Seeds & Pesticides is a trusted name in the agriculture sector, serving farmers with high-quality seeds and pesticides to promote better crop yields and sustainable farming practices.
+        </p>
+        <div class="footer-social-icons">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://wa.me/919133019281" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Us!</h4>
+        <ul class="contact-list">
+          <li>
+            <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+            <span>Macherla Town, Guntur District, Andhra Pradesh.</span>
+          </li>
+          <li>
+            <span class="icon"><i class="fa-solid fa-phone"></i></span>
+            <a href="tel:+919133019281">+91-9133019281</a>
+          </li>
+          <li>
+            <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+            <a href="mailto:contact@svsss.com">contact@svsss.com</a>
+          </li>
+          <li>
+            <span class="icon"><i class="fa-solid fa-clock"></i></span>
+            <span>Mon - Sat: 8:00am - 6:00pm</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="quick-links">
+          <li><a href="#about">Learn About Us</a></li>
+          <li><a href="#seeds">All Kind of Seeds</a></li>
+          <li><a href="#pesticides">All Kind of Seeds Pesticide</a></li>
+          <li><a href="#fertilizers">All Kind of Seeds Fertilizer</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Subscribe Newsletter</h4>
+        <p style="font-size: 14px; color: #B0B0B0; margin-bottom: 15px;">Get updates on new products and offers!</p>
+        <div class="subscribe-box">
+          <span>Subscribe Now!</span>
+          <button class="sub-btn">
+            <i class="fa-solid fa-envelope"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bar">
+      Copyright © 2024 Sri Venkata Siva Sai Seeds & Pesticides. All Rights Reserved. || Designed & Developed by <a href="#">Website Solutions India</a>.
+    </div>
+  </div>
+  <div class="floating-contact">
+      <a href="tel:+919133019281" class="phone" aria-label="Call Now"><i class="fa-solid fa-phone-volume"></i></a>
+      <a href="https://wa.me/919133019281" class="whatsapp" aria-label="WhatsApp Us"><i class="fa-brands fa-whatsapp"></i></a>
+  </div>
+
+
+  <script>
+    // Slider JS remains unchanged
+    (function(){ const slides=document.getElementById('slides'); const dots=Array.from(document.querySelectorAll('.dot')); const total=slides.children.length; let index=0; let autoTimer=null; const nextBtn=document.getElementById('next'); const prevBtn=document.getElementById('prev'); function goTo(i){ index=((i%total)+total)%total; slides.style.transform='translateX('+(-index*100)+'%)'; dots.forEach(d=>d.classList.remove('active')); dots[index].classList.add('active'); }
+    function next(){ goTo(index+1); }
+    function prev(){ goTo(index-1); }
+    nextBtn.addEventListener('click',()=>{ next(); resetAuto(); });
+    prevBtn.addEventListener('click',()=>{ prev(); resetAuto(); });
+    dots.forEach(d=>d.addEventListener('click',()=>{ goTo(+d.dataset.index); resetAuto(); }));
+    function startAuto(){ autoTimer=setInterval(next,4500); }
+    function resetAuto(){ clearInterval(autoTimer); startAuto(); }
+    const slider=document.getElementById('slider'); slider.addEventListener('mouseenter',()=>clearInterval(autoTimer)); slider.addEventListener('mouseleave',startAuto);
+    let startX=0; slider.addEventListener('touchstart',(e)=>{ startX=e.touches[0].clientX; clearInterval(autoTimer); }); slider.addEventListener('touchend',(e)=>{ const dx=(e.changedTouches[0].clientX-startX); if(dx>40) prev(); else if(dx<-40) next(); resetAuto(); }); goTo(0); startAuto(); })();
+  </script>
+</body>
+</html>
