@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta name="google-site-verification" content="KdYAbaRqWWFzv7qGpd78hQlDyZxdCujadQnEsATZVrQ" />
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Sri Venkata Siva Sai Seeds & Pesticides</title>
@@ -109,6 +108,7 @@
     /* Hero Slider */
     .hero { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
     .slider { position: relative; overflow: hidden; border-radius: 20px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); background: var(--light-green); height: 500px; }
+    .slides { display: flex; height: 100%; width: 100%; transition: transform 0.6s ease; }
     .slide { min-width: 100%; display: flex; align-items: center; justify-content: center; position: relative; height: 500px; }
     .slide img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 20px; filter: brightness(0.9); }
     .slider .overlay { position: absolute; left: 40px; bottom: 40px; background: rgba(0, 0, 0, 0.6); color: white; padding: 25px 30px; border-radius: 18px; backdrop-filter: blur(8px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); animation: fadeInUp 1s ease forwards; max-width: 80%; }
@@ -492,30 +492,24 @@
     </ul>
   </nav>
 
-<section class="hero" id="home">
-  <div class="slider" id="slider">
-    <div class="slides" id="slides">
-
-      <div class="slide">
-        <img src="seeds.jpg" alt="Quality seeds shop in Macherla Guntur Andhra Pradesh"/>
-        <div class="overlay">
-          <h2>Quality Seeds for Higher Yield</h2>
-          <p>Trusted varieties for paddy, cotton, and more.</p>
+  <section class="hero" id="home">
+    <div class="slider" id="slider">
+      <div class="slides" id="slides">
+        <div class="slide">
+          <img src="images/seeds.jpg" alt="Lush green crop field"/>
+          <div class="overlay">
+            <h2>Quality Seeds for Higher Yield</h2>
+            <p>Trusted varieties for paddy, cotton, and more.</p>
+          </div>
+        </div>
+        <div class="slide">
+         <img src="images/pesticides.jpg" alt="Farmers holding seeds" />
+         <div class="overlay">
+            <h2>Trusted Pesticides & Fertilizers</h2>
+            <p>Safe products from reliable brands — advice available in store.</p>
+          </div>
         </div>
       </div>
-
-      <div class="slide">
-        <img src="pesticides.jpg" alt="Trusted pesticides and fertilizers dealer in Macherla Andhra Pradesh"/>
-        <div class="overlay">
-          <h2>Trusted Pesticides & Fertilizers</h2>
-          <p>Safe products from reliable brands — advice available in store.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
       <button class="arrow left" id="prev">‹</button>
       <button class="arrow right" id="next">›</button>
       <div class="dots" id="dots">
@@ -566,7 +560,7 @@
     <h2 class="section-title">Our Commitment</h2>
     <div class="commitment">
       <div class="card">
-        <img src="./sustainable.jpg" alt="Sustainable farming practices and green energy" class="card-image"/>
+        <img src="http://googleusercontent.com/image_collection/image_retrieval/5332168773617524182" alt="Sustainable farming practices and green energy" class="card-image"/>
         <h3>Sustainable & High-Quality Products</h3>
         <p>We prioritize sustainability and environmental care in all our practices. By adhering to eco-friendly methods, we ensure the production of high-quality products while minimizing our ecological footprint.</p>
         <ul class="muted">
@@ -593,7 +587,7 @@
     <h2 class="section-title">Our Expertise</h2>
     <div class="expertise">
       <div class="card">
-        <img src="./farmers.jpg" alt="Farmer receiving technical support and solutions" class="card-image"/>
+        <img src="http://googleusercontent.com/image_collection/image_retrieval/10388420141504767577" alt="Farmer receiving technical support and solutions" class="card-image"/>
         <h3>Providing Exceptional Agricultural Solutions</h3>
         <ul class="muted">
           <li>Tractor in a field: Organic Farming — Promoting eco-friendly farming practices with natural fertilizers and sustainable techniques.</li>
@@ -692,7 +686,7 @@
     </div>
 
     <div class="footer-bar">
-      Copyright © 2024 Sri Venkata Siva Sai Seeds & Pesticides. All Rights Reserved. || Designed & Developed by <a href="#">ASHOK REDDY</a>.
+      Copyright © 2024 Sri Venkata Siva Sai Seeds & Pesticides. All Rights Reserved. || Designed & Developed by <a href="#">Website Solutions India</a>.
     </div>
   </div>
   <div class="floating-contact">
@@ -715,13 +709,4 @@
     let startX=0; slider.addEventListener('touchstart',(e)=>{ startX=e.touches[0].clientX; clearInterval(autoTimer); }); slider.addEventListener('touchend',(e)=>{ const dx=(e.changedTouches[0].clientX-startX); if(dx>40) prev(); else if(dx<-40) next(); resetAuto(); }); goTo(0); startAuto(); })();
   </script>
 </body>
-
 </html>
-
-
-
-
-
-
-
-
